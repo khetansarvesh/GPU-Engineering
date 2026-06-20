@@ -22,5 +22,10 @@ Hence there was a need of one hardware agnostic language. OpenAI developed Trito
 
 This blog [here](https://www.aleksagordic.com/blog/matmul) gives a very good understanding of how to write a kernel that can do matmul in a H100 GPU
 
+Important things to learn : 
+- GPU memory hierarchy — Learn HBM → L2 → shared memory → registers. Understand why FlashAttention is fast (it tiles into SRAM to avoid HBM round-trips).
+- CUDA basics — Read a few kernel implementations. Understand thread blocks, warps, coalesced access, Tensor Cores. You don't need to write FlashAttention, but you need to read kernel code.
+
+6. 
 # $\color{cyan}{Multi\ GPU\  Coding }$
 - How to [communicate](https://khetansarvesh.medium.com/communication-primitives-between-distributed-gpus-475592742a3d?postPublishedType=initial) between multiple GPUs
