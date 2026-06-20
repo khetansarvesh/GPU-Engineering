@@ -12,14 +12,15 @@ So different companies have differnt GPUs and differnt programming languages to 
 | Compiles To           | PTX → SASS         | GCN / CDNA       | SPIR-V            |
 | Hardware              | H100, B200, A100   | MI300X, MI350 (soon) | Gaudi 3, Arc, Xeon |
 
+Hence there was a need of one hardware agnostic language. OpenAI developed Triton !
 
-### Single GPU Coding
+# $\color{cyan}{Single\ GPU\  Coding }$
+
 - A piece of code running on a core of the GPU is called a kernel.
 - It can be written at a high level in CUDA (for Nvidia GPUs) or Triton (For Nvidia / AMD / Intel GPUs)
 - This is then compiled to Parallel Thread Execution (PTX), the low-level assembly used by NVIDIA GPUs.
 
 This blog [here](https://www.aleksagordic.com/blog/matmul) gives a very good understanding of how to write a kernel that can do matmul in a H100 GPU
 
-
-### Multi GPU Coding
+# $\color{cyan}{Multi\ GPU\  Coding }$
 - How to [communicate](https://khetansarvesh.medium.com/communication-primitives-between-distributed-gpus-475592742a3d?postPublishedType=initial) between multiple GPUs
