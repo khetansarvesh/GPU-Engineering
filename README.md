@@ -1,5 +1,17 @@
 # GPU-Engineering
 
+So different companies have differnt GPUs and differnt programming languages to give instructions to these GPUs.
+
+| Feature               | NVIDIA             | AMD              | Intel             |
+|-----------------------|--------------------|------------------|-------------------|
+| Kernel Language       | CUDA C++           | HIP C++          | SYCL / DPC++      |
+| Compiler              | `nvcc`             | `hipcc`          | `icpx`            |
+| Runtime               | CUDA               | ROCm             | oneAPI            |
+| Math Libraries        | cuBLAS, cuDNN, NCCL| rocBLAS, MIOpen, RCCL | oneMKL, oneDNN, oneCCL |
+| Inference Optimizer   | TensorRT-LLM       | (none)           | OpenVINO          |
+| Compiles To           | PTX → SASS         | GCN / CDNA       | SPIR-V            |
+| Hardware              | H100, B200, A100   | MI300X, MI350 (soon) | Gaudi 3, Arc, Xeon |
+
 
 ### Single GPU Coding
 - A piece of code running on a core of the GPU is called a kernel.
